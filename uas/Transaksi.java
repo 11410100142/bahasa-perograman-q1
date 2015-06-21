@@ -20,10 +20,10 @@ public class Transaksi{
 		return +dt.hitungSubTotal();
 	}
 	public static void cetakTransaksi(){
-		System.out.println("Toko fob surabaya");
+		System.out.println("Toko sby");
 		System.out.println("ID TR#: "+id);
 		System.out.println("-------------------------------------------");
-		System.out.println("No\t IDBarang\t Nama\t Kuantiti\t Sub Total");
+		System.out.println("No\t IDBarang\t Nama\t Jumlah \t Sub Total");
 		System.out.println("-------------------------------------------");
 		//System.out.println(hitungTotal());
 	}
