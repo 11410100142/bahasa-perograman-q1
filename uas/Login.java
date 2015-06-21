@@ -7,13 +7,12 @@ public class Login {
 	public static Scanner sc = new Scanner (System.in);
 	
 	public static void main (String [] args){
-		//PILIHAN LOGIN ADMIN ATAU KASIR
-		username.add("tyo");
-		password.add("022");
+		username.add("hima");
+		password.add("hima");
 		status.add("admin");
 		
-		username.add("fob");
-		password.add("surabaya");
+		username.add("kasir");
+		password.add("kasir");
 		status.add("kasir");
 		
 		boolean ceklogin = false;
@@ -23,10 +22,9 @@ public class Login {
 			System.out.println ("");
 			System.out.println ("==============================");
 			System.out.println ("            LOGIN             ");
-			System.out.println ("==============================");
-			System.out.print ("Input User Name \t: ");
+			System.out.print ("masukkan User Name \t: ");
 			String user = sc.next();
-			System.out.print ("Input Password \t: ");
+			System.out.print ("masukkan Password \t: ");
 			String pass = sc.next();
 			
 				if (username.contains(user) && password.contains(pass)) 
