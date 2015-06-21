@@ -1,21 +1,13 @@
 public class Kasir{
-	//attribute - kolom /field di tabel	
 	private String userName;
 	private String password;
 
-	//constructor
-	/**
-	* Method khusus yang dipanggil pertama kali ketika dibuat variable 
-	* dengan tipe class ini
-	* namaMethod== namaClass
-	*/
+
 	public Kasir(String userName, String password){
 		this.userName=userName;
 		this.password=password;
 	}
 
-	//access method get - membaca isi field
-	//set - mengisi/menulis isi field
 	public String getKasirName(){
 		return userName;
 	}
