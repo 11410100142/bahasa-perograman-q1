@@ -16,11 +16,11 @@ public class index1{
 	
 	public static void mainMenuAdmin(){
 		int pil;
-		do{
-			System.out.println("---------Owner---------");
+		do{ System.out.println("--------------------");
+			System.out.println("----  Menu Utama  ----");
 			System.out.println("1. Kelola User");
 			System.out.println("2. Kelola Barang");
-			System.out.println("3. Lapora Penjualan");
+			System.out.println("3. Laporan Penjualan");
 			System.out.println("4. Login");
 			System.out.println("5. Keluar");
 			System.out.print(" Masukkan menu pilihan (1-5): ");
@@ -146,15 +146,13 @@ public class index1{
 	public static void main(String []argc){
 		Scanner sc=new Scanner (System.in);
 		//tambahkan 2 user default
-		//tblUser.add(new User("tyo","022"));
-		//tblUser.add(new User("yoga","025"));
-		//tblKasir.add(new Kasir("fob","surabaya"));
-		//tblKasir.add(new Kasir("yvc","sidoarjo"));
+		//tblUser.add(new User("hima","hima"));
+		//tblKasir.add(new Kasir("kasir","kasir"));
 
 		
-		tblBarang.add(new Barang("001", "Knalpot", 30000, 35000));
-		tblBarang.add(new Barang("002","HID", 20000, 25000 ));
-		tblBarang.add(new Barang("003", "Gear", 45000, 50000));
+		tblBarang.add(new Barang("001","gula", 10000, 8800));
+		tblBarang.add(new Barang("002","beras", 12000, 7800 ));
+		tblBarang.add(new Barang("003","kacang", 8000, 8800));
 	boolean oke=false;
 		if(loginUser()){
 			oke=true;
@@ -165,11 +163,11 @@ public class index1{
 	public static void mainMenuKasir(){
 	int pil;
 		do{
-		System.out.println("Transaksi Kasir");
+		System.out.println("=============Transaksi Kasir================");
 		System.out.println("1. Transaksi");
 		System.out.println("2. View All Transaksi");
 		System.out.println("3. Kembali Ke Menu Utama");
-		System.out.println("");
+		System.out.println("============================================");
 		pil=bacaInt("Pilih menu 1-3 : ");
 			switch(pil){
 				case 1:Transaksi();break;
@@ -183,7 +181,7 @@ public class index1{
 	psn = bacaInt("Berapa jumlah barang yang anda pesan? : ");
 	System.out.println();
 	for(i=0;i<psn;i++){
-		String pesanBarang = bacaStr("Masukkan Nama barang yang dipesan : ");
+			String pesanBarang = bacaStr("Masukkan Nama barang yang dipesan :");
 			if(tblBarang.elementAt(i).getNama().equals(pesanBarang)){
 			double kuantiti = bacaDoub("Berapa Jumlah (KG) yang dipesan : ");
 			DTransaksi dtBaru = new DTransaksi(pesanBarang,kuantiti);
@@ -200,7 +198,7 @@ public class index1{
 	int i=0;
 		double total_bayar = 0;
 		System.out.println();
-		System.out.println("*-------- Toko Buah fob surabaya  ---------*");
+		System.out.println("*-------- Toko Sembako  ---------*");
 		System.out.println("ID TR#: ");
 		System.out.println("-------------------------------------------");
 		System.out.println("Nama Barang \t Harga Barang \t Kuantiti \t Sub Total");
@@ -220,7 +218,7 @@ public class index1{
 	public static void ReportTransaksi(){
 	int a=0;
 	//total=harga*jml;
-		System.out.println("Toko fob surabaya");
+		System.out.println("Toko baru jaya");
 		System.out.println("Nama Pegawai: "+cek);
 		System.out.println("-------------------------------------------------------------------");
 		System.out.println("No\t IDBarang\t Nama\t\t Harga\t Jumlah\t TotalHarga");
@@ -255,6 +253,7 @@ public class index1{
 	}
 	public static void viewAllUser(){
 		System.out.println("--lihat data user--");
+		System.out.println("-------------------");
 		for(User usr:tblUser)
 			System.out.println(usr.getUserName()+"\t"+usr.getPassword());
 	}
@@ -306,11 +305,11 @@ public class index1{
 		do{
 			if(username.contains(username) && pass.contains(pass)){			
 				j=tblUser.size();
-					if(username.equalsIgnoreCase("tyo")&&pass.equalsIgnoreCase("022")){
+					if(username.equalsIgnoreCase("ipunk")&&pass.equalsIgnoreCase("ipunk")){
 						mainMenuAdmin();
 						oke=true;
 					}
-					else if(username.equalsIgnoreCase("fob")&&pass.equalsIgnoreCase("surabaya")){
+					else if(username.equalsIgnoreCase("user")&&pass.equalsIgnoreCase("user")){
 						mainMenuKasir();
 						oke=true;
 					}
